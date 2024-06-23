@@ -1,0 +1,99 @@
+{
+    "key": "group_654e4b630ab05",
+    "title": "Utility : Vertical Spacing Options",
+    "fields": [
+        {
+            "key": "field_654e4b6345a79",
+            "label": "Vertical Spacing Options",
+            "name": "global_spacing_options",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "documentation_notes": "",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_654e4b7a45a7a",
+                    "label": "Top Spacing",
+                    "name": "top_spacing",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "documentation_notes": "",
+                    "choices": {
+                        "0": "None",
+                        "pt-16 lg:pt-24": "96px"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_654e4ba445a7b",
+                    "label": "Bottom Spacing",
+                    "name": "bottom_spacing",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "documentation_notes": "",
+                    "choices": {
+                        "0": "None",
+                        "pb-16 lg:pb-24": "96px"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "add_to_components": 0,
+    "modified": 1699630069
+}

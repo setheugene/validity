@@ -1,0 +1,216 @@
+/*
+ * Additional Utility classes
+ *
+ * Only add tailwind variations if
+ * they're actually needed. Remember, variations
+ * create many versions of a class which could
+ * potentially get out of hand really quick
+ */
+
+/*
+ * Wordpress WYSIWYG Figure alignment override
+ */
+figure, img {
+  &.alignright {
+    @apply float-right mt-0 mb-4 ml-3 mr-0 text-right;
+
+    img {
+      @apply inline-block;
+    }
+  }
+
+  &.alignleft {
+    @apply float-left mt-0 mb-4 ml-0 mr-3 text-left;
+
+    img {
+      @apply inline-block;
+    }
+  }
+
+  &.aligncenter {
+    @apply block mx-auto mt-0 mb-4 text-center;
+
+    img {
+      @apply inline-block;
+    }
+  }
+}
+
+.embed-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 1.875rem;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.aspect-square::before,
+.aspect-1\/1::before {
+  content:'';
+  display: block;
+  padding-top: 100%;
+}
+
+.aspect-2\/1::before {
+  content:'';
+  display: block;
+  padding-top: 50%;
+}
+
+.aspect-1\/2::before {
+  content:'';
+  display: block;
+  padding-top: 200%;
+}
+
+.aspect-4\/3::before {
+  content:'';
+  display: block;
+  padding-top: 75%;
+}
+
+.aspect-3\/4::before {
+  content:'';
+  display: block;
+  padding-top: 133.33%;
+}
+
+.aspect-16\/9::before {
+  content:'';
+  display: block;
+  padding-top: 56.25%;
+}
+
+.aspect-3\/5::before {
+  content:'';
+  display: block;
+  padding-top: 166%;
+}
+
+.aspect-5\/3::before {
+  content:'';
+  display: block;
+  padding-top: 60%;
+}
+
+.aspect-5\/4::before {
+  content:'';
+  display: block;
+  padding-top: 80%;
+}
+
+.aspect-2\/3::before {
+  content:'';
+  display: block;
+  padding-top: 150%;
+}
+
+.aspect-3\/2::before {
+  content:'';
+  display: block;
+  padding-top: 66.666667%;
+}
+
+.aspect-10\/2::before {
+  content:'';
+  display: block;
+  padding-top: 150%;
+}
+
+.aspect-10\/4::before {
+  content:'';
+  display: block;
+  padding-top: 150%;
+}
+
+.wowza {
+  background: tomato;
+}
+
+.h-screen--reduced {
+  height: calc(100vh - var(--topOffset));
+}
+
+.subtitle-line {
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    width: 64px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scaleX(0);
+    right: -76px;
+    transform-origin: left;
+    background-color: theme(colors.brand.deep-green);
+    transition: all 1s cubic-bezier(0.65,0,.076,1);
+  }
+  &.active::after {
+    transform: translateY(-50%) scaleX(1);
+  }
+}
+
+.validity__popup {
+  max-width: 83%;
+  padding: 24px;
+  margin: 24px auto;
+  background-color: theme(colors.white);
+
+  @screen lg {
+    max-width: 77%;
+    margin: 0 auto;
+    padding: 40px;
+  }
+
+  .wysiwyg {
+    p:not([class*="text-brand"]) {
+      color: theme(colors.brand.gray);
+    }
+  }
+  .mfp-close {
+    @screen lg {
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+  transform: scale(0.8);
+}

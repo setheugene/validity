@@ -1,0 +1,82 @@
+/**
+ * General Hero Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.general-hero {
+  min-height: calc( 100vh - var(--topOffset) );
+  padding: 112px 0 40px;
+
+  @screen lg {
+    padding: 40px 0;
+  }
+
+  .general-hero__top-bg-circle {
+    width: 312px;
+    height: 312px;
+    border-radius: 100%;
+    background-color: theme(colors.brand.deep-green-tint);
+    position: absolute;
+    top: -264px;
+    left: 50%;
+    right: unset;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    pointer-events: none;
+
+    @screen lg {
+      width: 669px;
+      height: 669px;
+      left: unset;
+      top: -534px;
+      right: 50px;
+      transform: translateX(0);
+    }
+  }
+  .general-hero__bottom-bg-circle {
+    width: 224px;
+    height: 224px;
+    border-radius: 100%;
+    background-color: theme(colors.brand.light-green-3);
+    position: absolute;
+    opacity: 0.5;
+    pointer-events: none;
+    bottom: -192px;
+    left: 25px;
+
+    @screen lg {
+      width: 469px;
+      height: 469px;
+      bottom: -497px;
+      left: 50px;
+    }
+  }
+  #general-hero__button {
+    background-color: theme(colors.brand.light-green-2);
+    transition: all .45s cubic-bezier(0.65,0,.076,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 146px;
+    height: 146px;
+    flex-shrink: 0;
+    animation-name: rollRight;
+    animation-duration: 2s;
+    animation-fill-mode: forward;
+    animation-timing-function: ease-out;
+
+    @screen lg {
+      width: 168px;
+      height: 168px;
+    }
+
+    &:hover {
+      transform: rotate(15deg);
+      background-color: theme(colors.brand.light-green-3);
+    }
+  }
+}

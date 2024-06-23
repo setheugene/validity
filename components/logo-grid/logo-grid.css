@@ -1,0 +1,22 @@
+/**
+ * Logo Grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.logo-grid {
+  .slick-track {
+    display: flex;
+  }
+  .slick-track .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    object-fit: contain;
+  }
+}

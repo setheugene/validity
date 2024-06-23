@@ -1,0 +1,266 @@
+.page-template-template-quoter {
+  background-color: theme(colors.white);
+  padding-top: 0;
+  .template-quoter__header {
+    top: 0;
+  }
+  &.logged-in .template-quoter__header {
+    top: 32px;
+  }
+  .navbar,
+  .footer,
+  .gf_progressbar_wrapper {
+    display: none;
+  }
+  .main {
+    height: 100%;
+    padding-bottom: 120px;
+    @screen lg {
+      height: calc(100dvh - var(--topOffset) - 120px);
+      padding-bottom: 0;
+    }
+  }
+
+  .llgq-quoter-back:hover {
+    svg {
+      transform: translateX(-6px) rotate(180deg);
+    }
+  }
+  .template-quoter__header-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      max-height: 42px;
+      @screen lg {
+        max-height: 56px;
+      }
+    }
+  }
+  .llgq-quoter-exit:hover {
+    path.arrow {
+      transform: translateX(4px);
+    }
+  }
+  .validity-progress-bar {
+    border: none;
+    padding: 0;
+    background-color: theme(colors.white);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 100px;
+
+    .validity-progress {
+      transition: all .2s ease-in-out;
+      background-color: theme(colors.brand.deep-green);
+      flex: 0 0 auto;
+      height: 8px;
+      border-radius: 100px;
+    }
+  }
+  .llgq-quoter-body {
+    .ll_gfield_type_section {
+      margin-bottom: 40px;
+      .gsection_title {
+        @extend .hdg-2;
+        color: theme(colors.brand.off-black);
+        text-align: center;
+      }
+      .gsection_description {
+        @extend .paragraph-small;
+        text-align: center;
+        color: theme(colors.brand.gray);
+        margin-top: 12px;
+      }
+    }
+    form.form-skin {
+      .gfield--type-section.gsection {
+        @screen lg {
+          grid-column-start: 3;
+          grid-column-end: 11;
+        }
+      }
+
+      .gform_page.llgq-center-next {
+        .gform_page_footer.top_label {
+          display: flex;
+          justify-content: center;
+          margin-top: 2rem;
+        }
+      }
+
+      .gfield.gfield--type-select,
+      .gfield--type-text,
+      .gfield--type-email,
+      .gfield--type-phone,
+      .ll_gfield_type_name,
+      .gfield--type-address {
+        @screen md {
+          grid-column-start: 4;
+          grid-column-end: 10;
+        }
+      }
+      .gfield--type-radio .ginput_container_radio .gfield_radio {
+        display: grid;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        grid-template-columns: repeat(1,1fr);
+
+        .gchoice {
+          margin-bottom: 0;
+          input:checked ~ label {
+            background-color: theme(colors.brand.deep-green-tint);
+          }
+          label {
+            @extend .paragraph-small;
+            display: block;
+            text-align: center;
+            padding: 12px 24px;
+            background-color: theme(colors.brand.light-green-4);
+            color: theme(colors.brand.off-black);
+            width: 100%;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all .3s;
+
+            &::before,
+            &::after {
+              display: none;
+            }
+            &:hover {
+              background-color: theme(colors.brand.deep-green-tint);
+            }
+          }
+        }
+      }
+      .gfield--type-checkbox .ginput_container_checkbox .gfield_checkbox {
+        display: grid;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        grid-template-columns: repeat(1,1fr);
+
+        .gchoice {
+          margin-bottom: 0;
+          input:checked ~ label {
+            &::before {
+              background-color: theme(colors.brand.deep-green-tint);
+            }
+            &::after {
+              width: 11px;
+              height: 11px;
+              top: 17px;
+              left: 15px;
+            }
+          }
+          label {
+            @extend .paragraph-small;
+            display: block;
+            padding: 12px 24px 12px 39px;
+            background-color: theme(colors.brand.light-green-4);
+            color: theme(colors.brand.off-black);
+            width: 100%;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: all .3s;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              margin-right: 10px;
+              width: 20px;
+              height: 20px;
+              left: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: theme(colors.white);
+              border-radius: 100%;
+              transition: all .2s ease-in-out;
+              border: 1px solid theme(colors.brand.deep-green-tint);
+            }
+            &:hover::before {
+              background-color: theme(colors.brand.deep-green-tint);
+            }
+          }
+        }
+      }
+      .gfield--type-radio.gf_list_2col .ginput_container_radio .gfield_radio,
+      .gfield--type-checkbox.gf_list_2col .ginput_container_checkbox .gfield_checkbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .gchoice {
+          width: 100%;
+          @screen lg {
+            width: 40%;
+          }
+        }
+      }
+      .gfield--type-radio.gf_list_3col .ginput_container_radio .gfield_radio,
+      .gfield--type-checkbox.gf_list_3col .ginput_container_checkbox .gfield_checkbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .gchoice {
+          width: 100%;
+          @screen lg {
+            width: 31.5%;
+          }
+        }
+      }
+      .gfield--type-radio.gf_list_4col .ginput_container_radio .gfield_radio,
+      .gfield--type-checkbox.gf_list_4col .ginput_container_checkbox .gfield_checkbox {
+        @screen md {
+          column-gap: 2rem;
+          grid-template-columns: repeat(2,1fr);
+        }
+        @screen lg {
+          grid-template-columns: repeat(4,1fr);
+        }
+      }
+    }
+    .gform_page_footer {
+      column-gap: 2rem;
+      row-gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      width: 100%;
+      .next-btn {
+        grid-column-start: 1;
+        cursor: pointer;
+        @screen md {
+          grid-column-start: 2;
+        }
+        span,
+        input {
+          cursor: pointer;
+        }
+      }
+      .primary-btn {
+        grid-column-start: 1;
+        @screen md {
+          grid-column-start: 2;
+        }
+      }
+      .gform_previous_button {
+        display: none;
+      }
+    }
+  }
+  /* .gform-body.gform_body {
+    @screen lg {
+      padding-top: 100px;
+    }
+  } */
+}
+.gform_wrapper.gravity-theme .form-skin .ginput_complex > span.ginput_left, .gform_wrapper.gravity-theme .form-skin .ginput_complex > span.ginput_right, .gform_wrapper.gravity-theme .form-skin .ginput_complex div.ginput_left, .gform_wrapper.gravity-theme .form-skin .ginput_complex div.ginput_right {
+  flex: 0 0 100%;
+}
+body img.gform_ajax_spinner {
+	display: none !important;
+}

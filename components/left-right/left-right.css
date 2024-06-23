@@ -1,0 +1,69 @@
+/**
+ * Left Right Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+.left-right .fit-image {
+  border-radius: 100%;
+  overflow: hidden;
+}
+.left-right__circle-wrapper.small {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  top: -23px;
+  right: 20px;
+
+  .left-right__circle {
+    background-color: theme(colors.brand.light-green-3);
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+  }
+}
+.left-right__circle-wrapper.medium {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  bottom: -32px;
+  right: 65px;
+
+  .left-right__circle {
+    background-color: theme(colors.brand.deep-green-tint);
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+  }
+}
+.left-right__circle-wrapper.large {
+  position: absolute;
+  width: 133px;
+  height: 133px;
+  left: -100px;
+  bottom: 32px;
+
+  .left-right__circle {
+    background-color: theme(colors.brand.light-green);
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.content-image .left-right__circle-wrapper {
+  &.small {
+    left: 20px;
+    right: unset;
+  }
+  &.medium {
+    left: 65px;
+    right: unset;
+  }
+  &.large {
+    right: -100px;
+    left: unset;
+  }
+}
+

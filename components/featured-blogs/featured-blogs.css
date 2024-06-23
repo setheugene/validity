@@ -1,0 +1,68 @@
+/**
+ * Featured Blogs Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.featured-blogs {
+  .related-blog__card-text-hover {
+    @extend .paragraph-default;
+    font-weight: 600;
+    color: theme(colors.white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .45s;
+  }
+  .related-blog__card {
+    border-radius: 8px;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      height: 467px;
+      width: 467px;
+      opacity: 0.8;
+      border-radius: 100%;
+      background-color: theme(colors.brand.light-green);
+      transform-origin: left bottom;
+      z-index: 10;
+      transition: all .3s cubic-bezier(.46,.63,.89,.99);
+    }
+    &:hover {
+      .related-blog__card-text-hover {
+        opacity: 1;
+        transform: translateY(-32px);
+      }
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+    &.large {
+      &::before {
+        height: 775px;
+        width: 775px;
+      }
+    }
+    img {
+      object-fit: cover;
+    }
+  }
+}
+.aspect-large-featured-blog {
+  border-radius: 8px;
+  overflow: hidden;
+
+  &::before {
+    content:'';
+    display: block;
+    padding-top: 83.41%;
+  }
+}

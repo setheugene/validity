@@ -1,0 +1,228 @@
+{
+    "key": "group_654e3a410eaf1",
+    "title": "Components : Benefits Grid",
+    "fields": [
+        {
+            "key": "field_654e3d38df98d",
+            "label": "Top Spacing Options",
+            "name": "benefits_grid_top_spacing",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "documentation_notes": "",
+            "choices": {
+                "0": "None",
+                "pt-16 lg:pt-24": "96px"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_654e3d96df98e",
+            "label": "Bottom Spacing Options",
+            "name": "benefits_grid_bottom_spacing",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "documentation_notes": "",
+            "choices": {
+                "0": "None",
+                "pb-16 lg:pb-24": "96px"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_654e3a41ea272",
+            "label": "Heading",
+            "name": "benefits_grid",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "documentation_notes": "",
+            "clone": [
+                "group_5f592cd62e1bc"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
+        },
+        {
+            "key": "field_6564c4bee2e39",
+            "label": "Description",
+            "name": "benefits_grid_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "documentation_notes": "",
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_654e3a63ea273",
+            "label": "Benefits",
+            "name": "benefits_grid_benefits",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "documentation_notes": "",
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Benefit Column",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_654e3a94ea274",
+                    "label": "Animated Icon",
+                    "name": "animated_icon",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "documentation_notes": "",
+                    "choices": {
+                        "concierge-service": "Concierge Service",
+                        "dedicated-support": "Dedicated Support",
+                        "exceptional-care": "Exceptional Care",
+                        "flexible-solutions": "Flexible Solutions",
+                        "high-volume-capacity": "High Volume Capacity",
+                        "put-others-first": "Put Others First",
+                        "seemless-integration": "Seemless Integration",
+                        "speed-accuracy": "Speed Accuracy",
+                        "unmatched-quality": "Unmatched Quality"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_654e3a63ea273"
+                },
+                {
+                    "key": "field_654e3beae9318",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "documentation_notes": "",
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_654e3a63ea273"
+                },
+                {
+                    "key": "field_654e3bfae9319",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "bg-white",
+                        "id": ""
+                    },
+                    "documentation_notes": "",
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_654e3a63ea273"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "component",
+                "operator": "==",
+                "value": "benefits-grid"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "add_to_components": 0,
+    "modified": 1701102799
+}

@@ -1,0 +1,11 @@
+/**
+ * Service Hero Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.service-hero {
+  min-height: calc( 100vh - var(--topOffset) );
+}

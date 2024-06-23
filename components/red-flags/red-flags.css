@@ -1,0 +1,43 @@
+/**
+ * Red Flags Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.red-flags {
+  .red-flag__tooltip {
+    @extend .paragraph-large;
+    position: absolute;
+    width: 389px;
+    top: calc(100% + 20px);
+    left: 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: theme(colors.white);
+    color: theme(colors.brand.off-black);
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    transition: all .45s cubic-bezier(.4,1.13,.88,1.15);
+    z-index: 40;
+
+    &.top {
+      bottom: calc(100% + 20px);
+      top: unset;
+    }
+
+    &.is-visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .red-flag__tooltip-mobile {
+    @extend .paragraph-large;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: theme(colors.white);
+    color: theme(colors.brand.off-black);
+  }
+}

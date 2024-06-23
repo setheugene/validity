@@ -1,0 +1,48 @@
+/**
+ * Team Grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.team-grid {
+  .fit-image img {
+    object-fit: cover;
+  }
+  .team-grid__member {
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 100%;
+      border-radius: 100%;
+      opacity: 0.9;
+      transition: all .3s ease-in-out;
+      z-index: 25;
+      background-color: theme(colors.brand.deep-green-tint-2);
+    }
+    .team-grid__member-hover {
+      transition: all .5s;
+      transform: translateY(12px);
+      opacity: 0;
+    }
+    &:hover {
+      &::after {
+        top: 0;
+      }
+      .team-grid__member-hover {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+.mini-hero + .team-grid {
+  padding-top: 64px;
+  @screen lg {
+    padding-top: 96px;
+  }
+}

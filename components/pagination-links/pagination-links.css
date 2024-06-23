@@ -1,0 +1,17 @@
+/**
+ * Pagination Links Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.pagination-links {
+  .pagination {
+    @extend .paragraph-default;
+    color: theme(colors.brand.off-black);
+  }
+  .page-numbers.current {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,126 @@
+.primary-btn {
+  @extend .paragraph-large;
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  height: 30px;
+  width: fit-content;
+
+  &:not([class*="mt-"]) {
+    margin-top: 20px;
+  }
+}
+
+.primary-btn .circle {
+  position: absolute;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  transition: all .45s cubic-bezier(0.65,0,.076,1);
+  padding-left: 6px;
+  top: -2px;
+}
+
+.primary-btn.large .btn-title {
+  font-weight: 700;
+  padding-left: 48px;
+}
+
+.primary-btn.small .btn-title {
+  font-weight: 400;
+  padding-left: 32px;
+  font-size: 14px;
+}
+
+.primary-btn.large .circle {
+  width: 36px;
+  height: 36px;
+  padding-left: 5px;
+  top: -5px;
+}
+
+.primary-btn.small .circle {
+  width: 24px;
+  height: 24px;
+  padding-left: 5px;
+  top: 2px;
+}
+
+.primary-btn.large .right-arrow-btn-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.primary-btn.small .right-arrow-btn-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.primary-btn .circle .line {
+  transition: all .45s cubic-bezier(0.65,0,.076,1);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.primary-btn .right-arrow-btn-icon {
+  transition: all .45s cubic-bezier(0.65,0,.076,1);
+  transform: translateX(0);
+}
+
+.primary-btn .btn-title {
+  position: relative;
+  z-index: 10;
+  padding-left: 42px;
+  padding-right: 12px;
+}
+
+.primary-btn.white {
+  color: theme(colors.white);
+  .circle {
+    background-color: theme(colors.white);
+  }
+  &:hover {
+    color: theme(colors.brand.off-black);
+  }
+}
+
+.primary-btn.green {
+  color: theme(colors.brand.deep-green);
+  .circle {
+    background-color: theme(colors.brand.deep-green);
+  }
+  &:hover {
+    color:theme(colors.white);
+  }
+}
+
+.primary-btn:not(.small):hover {
+  .right-arrow-btn-icon {
+    transform: translateX(6px);
+  }
+  .circle {
+    width: 100%;
+    .line {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.primary-btn.small:hover {
+  .circle {
+    width: 100%;
+  }
+}
+
+
+.wysiwyg .btn {
+  @apply mt-5;
+}
+
+.btn-group {
+  @apply grid grid-flow-col gap-5;
+}

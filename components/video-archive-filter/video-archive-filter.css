@@ -1,0 +1,45 @@
+/**
+ * Video Archive Filter Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.video-archive-filter {
+  .video__filter label {
+    transition: all .2s;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 6px;
+      bottom: -16px;
+      left: 0;
+      background-color: theme(colors.brand.light-green);
+      transition: all .2s;
+      transform: scaleX(0);
+      opacity: 0;
+      @screen lg {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      color: theme(colors.brand.light-green);
+    }
+  }
+  .video__filter input:checked ~ label {
+    color: theme(colors.brand.light-green);
+    &::after {
+      transform: scaleX(-1);
+    }
+  }
+  #video-archive__filters {
+    &.is-open {
+      display: block;
+    }
+  }
+}

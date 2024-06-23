@@ -1,0 +1,73 @@
+/**
+ * Two Column with Dots Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.two-column-with-dots {
+  .tcwd__circle-position {
+    position: absolute;
+
+    &.large {
+      bottom: -164px;
+      left: 13px;
+
+      .tcwd__circle {
+        border-radius: 100%;
+        width: 270px;
+        height: 270px;
+        background-color: theme(colors.brand.deep-green-tint);
+      }
+    }
+
+    &.medium {
+      right: 1rem;
+      bottom: 56px;
+
+      .tcwd__circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: theme(colors.brand.light-green);
+      }
+    }
+
+    &.small {
+      top: 0;
+      right: 134px;
+
+      .tcwd__circle {
+        width: 49px;
+        height: 49px;
+        border-radius: 100%;
+        background-color: theme(colors.brand.light-green-4);
+      }
+    }
+  }
+  .tcwd__lower-row {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -100%;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: theme(colors.white);
+    }
+    @screen lg {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -100%;
+        right: 0;
+        left: unset;
+        top: unset;
+        height: 100%;
+        width: 100%;
+        background-color: theme(colors.white);
+      }
+    }
+  }
+}

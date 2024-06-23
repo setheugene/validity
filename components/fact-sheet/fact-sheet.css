@@ -1,0 +1,24 @@
+/**
+ * Fact Sheet Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+ .fact-sheet__button {
+  opacity: 0;
+  transition: all .45s cubic-bezier(0.65,0,.076,1);
+
+  &:hover {
+    transform: rotate(15deg);
+    background-color: theme(colors.brand.light-green-3);
+  }
+}
+
+.active .fact-sheet__button {
+  opacity: 1;
+  animation-name: rollLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forward;
+  animation-timing-function: ease-out;
+}

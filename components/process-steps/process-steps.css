@@ -1,0 +1,15 @@
+/**
+ * Process Steps Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.process-steps {
+  .process-steps__circle-wrapper {
+    position: absolute;
+    top: 72px;
+    left: -2px;
+  }
+}

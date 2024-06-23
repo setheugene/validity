@@ -1,0 +1,51 @@
+/**
+ * Video Card Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.video-card {
+  a {
+    .video-card__hover {
+      svg {
+        transform: translateY(20px);
+        transition: all .3s ease-in-out;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        height: 401px;
+        width: 401px;
+        opacity: 0.8;
+        border-radius: 100%;
+        background-color: theme(colors.brand.light-green);
+        transform-origin: left bottom;
+        transition: all .3s cubic-bezier(.46,.63,.89,.99);
+      }
+      .hover-text {
+        transform: translateY(24px);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+      }
+    }
+    &:hover {
+      svg {
+        transform: translateY(0);
+      }
+      .hover-text {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .video-card__hover {
+        &::before {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+}

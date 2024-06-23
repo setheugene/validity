@@ -1,0 +1,108 @@
+/**
+ * Content Accordion Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+
+.content-accordion {
+  .content-accordion__item-title {
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+
+    .icon {
+      flex: 0 0 auto;
+    }
+
+    .item-title {
+      flex: 1 0 0px;
+      width: 75%;
+
+      @screen sm {
+        width: auto;
+      }
+    }
+
+    .icon-plus {
+      width: 13px;
+    }
+
+    .icon-minus {
+      width: 13px;
+    }
+
+    .icon-chevron-down {
+      width: 35px;
+    }
+
+    &.is-open {
+
+      &.is-icon-chevron {
+        .icon-chevron-down {
+          transform: rotate(180deg);
+        }
+      }
+
+      &.is-icon-plus-minus {
+        .icon-plus {
+          @apply hidden;
+        }
+
+        .icon-minus {
+          @apply block;
+        }
+      }
+
+      &.is-icon-plus-cross {
+        .icon-plus {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &:not(.is-open):hover,
+    &:not(.is-open):focus {
+      .icon-wrapper {
+        background-color: theme(colors.brand.light-green);
+      }
+    }
+    &.is-open .icon-wrapper {
+      background-color: theme(colors.brand.light-green);
+    }
+  }
+
+  .content-accordion__item {
+    transition: 0.15s ease;
+
+    .content-accordion__item-answer {
+      margin-top: -16px;
+      &.is-open {
+        @apply block;
+      }
+
+      p:not([class*="hdg-"], [class*="paragraph-"]) {
+        @apply paragraph-default;
+      }
+    }
+
+    .icon-minus {
+      @apply hidden;
+    }
+
+    .icon-plus {
+      @apply block;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      transition: 0.25s ease-in-out;
+    }
+
+    .icon-chevron-down {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: 0.25s ease-in-out;
+    }
+  }
+}
+

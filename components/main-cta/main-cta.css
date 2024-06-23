@@ -1,0 +1,65 @@
+/**
+ * Main CTA Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.main-cta {
+  .image-wrapper {
+    position: relative;
+
+    @screen lg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50vw;
+      height: 100%;
+    }
+
+    &.image-content {
+      left: 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+
+      @screen lg {
+        display: none;
+      }
+    }
+  }
+
+  .alignment-container {
+    @apply flex items-center justify-center;
+    @screen lg {
+      min-height: 50vw;
+    }
+
+    &::before {
+      @screen lg {
+        content: '';
+        display: block;
+        min-height: calc( 100vh - $navbarheight );
+      }
+    }
+
+    .container {
+      @apply flex-initial w-full;
+    }
+  }
+  lottie-player {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: unset;
+    width: 100%;
+
+    &.content-image {
+      right: 0;
+    }
+  }
+}

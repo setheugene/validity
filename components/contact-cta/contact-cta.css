@@ -1,0 +1,13 @@
+/**
+ * Contact CTA Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.contact-cta {
+  .loop-video-container .loop-video-btn {
+    display: none;
+  }
+}

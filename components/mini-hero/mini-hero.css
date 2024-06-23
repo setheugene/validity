@@ -1,0 +1,25 @@
+/**
+ * Mini Hero Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.mini-hero {
+  .mini-hero__background {
+    background-color: theme(colors.brand.light-green-4);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: calc(100% - 64px);
+
+    img {
+      position: absolute;
+      width: 100%;
+      bottom: -63px;
+      height: 64px;
+    }
+  }
+}
